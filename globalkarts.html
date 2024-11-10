@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global-Kart - Ecommerce Site</title>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        header {
+            background-color:skyblue;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        #login-btn, #register-btn {
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #login-btn:hover, #register-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        #product-listing {
+            padding: 20px;
+        }
+
+        #product-listing ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #product-listing li {
+            margin: 20px;
+            width: 200px;
+            text-align: center;
+        }
+
+        #product-listing img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #categories {
+            padding: 20px;
+        }
+
+        #categories ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #categories li {
+            margin: 20px;
+            width: 150px;
+            text-align: center;
+        }
+
+        #categories button {
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #categories button img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        #categories button p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div style="display: flex; align-items: center;">
+                <img src="logo.jpg" alt="Global-Kart Logo" style="width: 50px; height: 50px; cursor: pointer;" onclick="location.reload()">
+                <h1 style="margin-left: 10px;">Global-Kart</h1>
+                <p style="margin-left: 10px; font-size: 18px;">Your Style, Your Way</p>
+            </div>
+            <nav>
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Register</button>
+            </nav>
+        </header>
+
+        <section id="product-listing">
+            <h2>Product Listing</h2>
+            <ul>
+                <li>
+                    <img src="shirt.jpeg" alt="SALE FLAT 70 % OFF on Casuals">
+                    <p>SALE FLAT 70 % OFF on Casual's </p>
+                </li>
+                <li>
+                    <img src="shoe.jpeg" alt="SALE FLAT 50 % OFF on Shoes">
+                    <p>SALE FLAT 50 % OFF on Shoes</p>
+                </li>
+                <li>
+                    <img src="tradional dress.png" alt="SALE FLAT 60 % OFF on Traditionals">
+                    <p>SALE FLAT 60 % OFF on Traditionals</p>
+                </li>
+                <li>
+                    <img src="workware.avif" alt="SALE FLAT 40-80 % OFF on Workwear">
+                    <p>SALE FLAT 40-80 % OFF on Workwear</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="categories">
+            <h2>Shop by Brands</h2>
+            <ul>
+                <li>
+                    <button>
+                        <img src="WhatsApp Image 2024-11-10 at 00.19.32_b9983684.jpg" alt="Puma">
+                        <p>Puma</p>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="WhatsApp Image 2024-11-10 at 00.23.03_91db6218.jpg" alt="Zudio">
+                        <p>Zudio</p>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="WhatsApp Image 2024-11-10 at 00.23.04_6b976c63.jpg" alt="Calvin Klein">
+                        <p>Calvin Klein</p>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <img src="WhatsApp Image 2024-11-10 at 00.24.48_b01edd3c.jpg" alt="Nike">
+                        <p>Nike</p>
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('login-btn').addEventListener('click', function() {
+            console.log('Login button clicked');
+        });
+
+        document.getElementById('register-btn').addEventListener('click', function() {
+            console.log('Register button clicked');
+        });
+
+        document.querySelectorAll('#categories button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                console.log('Category button clicked');
+            });
+        });
+    </script>
+</body>
+</html>
